@@ -1,27 +1,28 @@
-# Ex.No:2(D) VARIABLE SCOPE AND CONSTRUCTOR
+# Ex.No:2(E) ACCESS MODIFIERS
 
 ## QUESTION:
-Create a Java class Book with instance variables title and author.
+Create a class Calculator with: One non-static method add(int a, int b) that returns the sum, One static method info() that says "Calculator is ready".
 
 ## AIM:
-To write a Java program to demonstrate variable scope and the use of a constructor to initialize instance variables.
+To write a Java program that demonstrates the use of access modifiers through static and non-static methods in a class.
 
 ## ALGORITHM :
 1.	Start the program.
 2.	Import the necessary package 'java.util'
-3.	Create a class named Book with instance variables title and author.
-4. Create a parameterized constructor to initialize these variables.
-5. In the main() method, create an object of the Book class and pass values through the constructor.
-6. Display the values.
-7. End the program.
-
+3.	Create a class named Calculator.
+4. Declare a non-static method add(int a, int b) to return the sum of two integers.
+5. Declare a static method info() to display a message.
+6. In the main() method, call the static method using the class name.
+7. Create an object of the Calculator class and call the non-static method.
+8. Display the output.
+9. End the program.
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Variable scope and Constructor using Java
+Program to implement a Access Modifiers using Java
 Developed by: KEERTHANA V
-RegisterNumber:212223220045
+RegisterNumber:212223220045 
 */
 ```
 
@@ -29,45 +30,37 @@ RegisterNumber:212223220045
 ```
 import java.util.Scanner;
 
-class Book 
+class Calculator 
 {
-    String title;
-    String author;
-    Book(String t, String a)
+    static void show()
     {
-        title = t;
-        author = a;
+        System.out.println("Calculator is ready");
     }
-
-    void display() {
-        System.out.println("Book Title: " + title);
-        System.out.println("Author: " + author);
+    int sum(int a,int b)
+    {
+        return a+b;
     }
 }
 
 class prog {
-    public static void main(String[] args)
+    public static void main(String[] args) 
     {
-        Scanner sc = new Scanner(System.in);
-        
-        String title = sc.nextLine();   
-        String author = sc.nextLine(); 
-
-        Book b = new Book(title, author);
-        b.display();
-
-        sc.close();
+        Scanner sc=new Scanner(System .in);
+        Calculator.show();
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+        Calculator calc=new Calculator();
+        int result=calc.sum(x,y);
+        System.out.println("Sum: "+result);
     }
 }
 ```
 
-
 ## OUTPUT:
 
-![java24](https://github.com/ABINAYA-27-76/19AI307_ODD-25-26-/blob/deb86e008500c33f568047cc6e92298e774f4c47/19AI307_JAVA(25-26)/Module-02/DAY-4/java24.png)
+![java25](https://github.com/ABINAYA-27-76/19AI307_ODD-25-26-/blob/1d041f830e60c366d7b4eaa39bb473ed78dd8001/19AI307_JAVA(25-26)/Module-02/DAY-5/java25.png)
 
 ## RESULT:
-
-Thus, the Java program to demonstrate variable scope and constructor was executed successfully.
+Thus, a Java program to implement Access Modifiers with static and non-static methods was executed successfully.
 
 
